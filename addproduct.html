@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Add product - Simpity</title>
+  
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body align="center">
+  <div id="divLogo" align="center" class="stydivLogo">
+  <a href="index.html"><img id="imglogo" src="logofull.jpeg" width="70%" height="70%"></a>
+  </div>
+  
+  <div id="divDashboardCompany" class="stydivPitch">
+    <section id="secCompany1" class="stySectionBlue">
+      <label id="labelCompanyName">Company name</label>
+    </section>
+    
+    <div id="divMenu" align="center" style="color: black; font-size: 17px;">
+    
+    <p><a href="addbalance.html">Add balance</a> • 
+    <a href="#">Settings</a> • 
+    <a href="company.html">Exit</a></p>
+    
+    </div>
+    
+    <div id="divBalance" align="center" style="color: black; font-size: 17px;">
+    <label id="labelBalance">Balance (SOL): 0</label>
+    
+    </div>
+    
+    <p id="pAddProductInfo" class="styBigText">
+      Fill in the information below to add each unit of your product, which requires a unique code, as for example, an UPC code, for identification and search by end consumers.
+      <br><br>
+      Alert: This must be done separately for each product unit. You can also use our API to automate it.
+      <br><br>
+      We recommend printing the product code directly on the product rather than on its packaging. This makes it easier for end consumers to verify the product's status.
+    </p>
+    
+    <input type="text" id="tAddProductCompanyName" placeholder="Company name will appear here" 
+        style="width: 300px; padding: 10px; font-size: 16px;" readonly><br>
+    <input type="text" id="tAddProductName" placeholder="Product Name" 
+        style="width: 300px; padding: 10px; font-size: 16px;"><br>
+    <input type="text" id="tAddProductUPC" placeholder="UPC Code or other printed on the product." 
+        style="width: 300px; padding: 10px; font-size: 16px;"><br>
+    
+    <a href="company.html"><button id="bCompanyAddProduct" class="stybGrandeFine">Add product</button></a>
+    <a href="company.html" style="font-size: 13px;">Back</a><br>
+    <p style="color: black; font-size: 11px;">* Today, adding a product costs 0.001 SOL.
+    <br>* After being added, it cannot be  modified.</p>
+      
+    
+  </div>
+
+</body>
+
+</html>

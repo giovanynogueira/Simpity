@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Confirm Product Sold - Simpity</title>
+  
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css">
+  
+  <script>
+    // Load an example of product
+    window.onload = function() {
+      Example();
+    };
+  </script>
+  
+</head>
+
+<body align="center">
+  <div id="divLogo" align="center" class="stydivLogo">
+  <a href="index.html"><img id="imglogo" src="logofull.jpeg" width="70%" height="70%"></a>
+  </div>
+  
+  <div id="divDashboard" class="stydivPitch">
+    <section id="sec1" class="stySectionBlue">
+      <label id="labelProductCode">Product code</label>
+    </section>
+    
+    <div id="divMenu" align="center" style="color: black; font-size: 17px;">
+    
+    <p>
+    <a href="index.html">Exit</a></p>
+    
+    </div>
+    
+    <div id="divProduct" class="stydivPitch" align ="left" style="color: black; font-size: 18px;">
+      <p>
+        <p align="center">Confirm this product:</p><br>
+      Product registered by: <label id="lCompanyName">-</label>
+      <br>Product name: <label id="lProductName">-</label>
+      <br>Product code: <label id="lProductCode">-</label>
+      
+      <br><br>Registered by (<label id="lCompanyRName"></label>) in: <label id="lRegisteredIn">-</label>
+      <br>Seller<label id="lSellerName"></label> received in: <label id="lReceivedIn">-</label>
+      <br>Seller<label id="lSellerName"></label> sold in: <label id="lSoldIn">-</label>
+      <br>End consumer<label id="lEndConsumerName"></label> purchased in: <label id="lBoughtIn">-</label>
+      </p>
+      <br>
+      <div align="center">
+      <p>Upload a photo showing the product code next to a receipt proving the sale/purchase of the product:
+      <br>
+      <input type="file" id="iProductPhoto">
+      <br>
+      You are: <label id="lUserType" style="font-size: 14px">end consumer or seller will appear here</label>
+      <br><br>
+      <button id="bConfirm" class="stybGrandeFine" onclick="fConfirm()">Confirm</button>
+      </p>
+      </div>
+    </div>
+    
+    
+    
+    <script>
+      
+      function Example() {
+        // Information about the product
+          const companyname = "Sneakersuper";
+          const productname = "Sneakers  XXT";
+          const productcode = "123456789000";
+          const registeredin = "October 28, 2024 at 10:38:33 AM";
+          const receivedin = "November 1, 2024 at 02:22:33 PM";
+          const currentstatus = "Waiting to be  sold and confirmed.";
+          const sellername = "Teen Store";
+        
+        // Loading the example
+          document.getElementById("lCompanyName").textContent = companyname;
+          document.getElementById("lCompanyRName").textContent = companyname;
+          document.getElementById("lProductName").textContent = productname;
+          document.getElementById("lProductCode").textContent = productcode;
+          document.getElementById("labelProductCode").textContent = productcode;
+          document.getElementById("lRegisteredIn").textContent = registeredin;
+          document.getElementById("lReceivedIn").textContent = receivedin;
+          document.getElementById("lSellerName").textContent = " (" + sellername + ")";
+          document.getElementById("lCurrentStatus").textContent = currentstatus;
+      }
+      
+      function fConfirm() {
+        alert("Product sale confirmation sent!");
+        window.location.href = "index.html";
+      }
+      
+      
+    </script>
+
+</body>
+
+</html>

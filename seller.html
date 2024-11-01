@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>My dashboard - Simpity</title>
+  
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body align="center">
+  <div id="divLogo" align="center" class="stydivLogo">
+  <a href="index.html"><img id="imglogo" src="logofull.jpeg" width="70%" height="70%"></a>
+  </div>
+  
+  <div id="divDashboard" class="stydivPitch">
+    <section id="sec1" class="stySectionBlue">
+      <label id="labelName">Seller name</label>
+    </section>
+    
+    <div id="divMenu" align="center" style="color: black; font-size: 17px;">
+    
+    <p>
+    <a href="#">Settings</a> • 
+    <a href="index.html">Exit</a></p>
+    
+    </div>
+    
+    <br><br>
+    <input type="text" id="tSearchForAProduct" placeholder="Search for a product..." 
+        style="width: 300px; padding: 10px; font-size: 16px;"><br>
+    
+    <button id="bSearchProduct" class="stybGrandeFine" onclick="fSearch()">Search</button>
+    <br><br><br>
+    
+    <div style="color: black; font-size: 13px; border: 1px solid black; padding: 20px; margin: 1px;">
+      <!-- history of confirmed purchases -->
+      
+      <p>When you confirm the products you received and/or sold, they will appear here.</p>
+    </div>
+      
+    
+  </div>
+  
+  
+  
+  <script>
+    
+    function fSearch() {
+      window.location.href = "seller-product.html";
+    }
+    
+  </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

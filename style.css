@@ -1,0 +1,74 @@
+body {
+    font-size: 15pt;
+    background-color: #FFFFFF;
+    margin: 0;
+    max-width: 480px;
+    margin: auto;
+}
+
+.stySlogan {
+  font-size: 15pt;
+}
+
+.stydivLogo {
+  background-color: #FFFFFF;
+  border: none;
+}
+
+.stydivPitch {
+  padding-top: 04px;
+  padding-bottom: 04px;
+  align-items: center;
+  color: white;
+  margin: 10px;
+  font-size: 30px;
+}
+
+.styBigText {
+  padding-top: 04px;
+  padding-bottom: 04px;
+  align-items: center;
+  color: black;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.stybGrande {
+            font-size: 18px;
+            padding: 10px 18px;
+            border: 1px solid black;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            
+}
+
+.stybGrandeFine {
+            font-size: 18px;
+            padding: 04px 25px;
+            border: 1px solid black;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            
+}
+
+.stySectionBlue {
+  background-color: #7BA1FF;
+}
+
+.button-container {
+            align-items: center;
+            padding: 02px;
+        }
+        
+.divSign {
+  font-size: 30px;
+}
+
+
+

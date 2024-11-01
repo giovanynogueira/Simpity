@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>For companies - Simpity</title>
+  
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body align="center">
+  <div id="divLogo" align="center" class="stydivLogo">
+  <a href="index.html"><img id="imglogo" src="logofull.jpeg" width="70%" height="70%"></a>
+  </div>
+  
+  <section class="stySectionBlue">
+    <div id="divCompanySign" class="stydivPitch" align="center">
+      <p id="pPitch" align="center" class="stydivPitch">
+      Log in or register!
+      <br>
+      It's simple and useful.
+      </p>
+      <button id="bLogIn" class="stybGrande" onclick="fLogIn()">Log In</button>
+      <button id="bRegister" class="stybGrande" onclick="fRegister()">Register</button>
+    </div>
+  </section>
+    
+    
+    
+    <div id="divSignUp" style="display: none; background-color: #EDEEFB" class="divSign">
+      <label for="fullname">Full name: </label><br><input id="SignUpFullName" type="text" style="font-size: 25px;">
+      <br><label for="address">Address: </label><br><input id="SignUpAddress" type="text" style="font-size: 25px;">
+      <br><label for="city">City: </label><br><input id="SignUpCity" type="text" style="font-size: 25px;">
+      <br><label for="state">State: </label><br><input id="SignUpState" type="text" style="font-size: 25px;">
+      <br><label for="country">Country: </label><br><input id="SignUpCountry" type="text" style="font-size: 25px;">
+      <br><label for="zip code">Zip code: </label><br><input id="SignUpZipCode" type="text" style="font-size: 25px;">
+      <br>
+      <label for="e-mail">e-mail: </label><br><input id="SignUpEmail" type="text" style="font-size: 25px;">
+      <br><label for="Password">Password: </label><br><input id="SignUpPassword" type="password" style="font-size: 25px;">
+      <br><br><button id="bSignUp" class="stybGrande" onclick="fSignUp()">Register</button>
+    </div>
+    
+    
+    
+    <div id="divSignIn" style="display: none; background-color: #EDEEFB" class="divSign">
+      <label for="e-mail">e-mail: </label><br><input id="SignInEmail" type="text" style="font-size: 25px;">
+      <br><label for="Password">Password: </label><br><input id="SignInPassword" type="password" style="font-size: 25px;">
+      <br><br><button id="bSignIn" class="stybGrande" onclick="fSignIn()">Log In</button>
+      <br><a href="#" style="font-size: 15px;">Forgot my password</a>
+    </div>
+  
+  
+  
+  
+  
+  
+  
+  <script>
+    
+    
+    function fLogIn() {
+      document.getElementById("divSignIn").style.display = "block";
+      document.getElementById("divSignUp").style.display = "none";
+    }
+    
+    function fRegister() {
+      document.getElementById("divSignUp").style.display = "block";
+      document.getElementById("divSignIn").style.display = "none";
+    }
+
+    function fSignUp() {
+      // This is only a test. It does not work like this; we will update it.
+      alert("Dear Company, please verify your email to confirm your registration.");
+      document.getElementById("divSignIn").style.display = "block";
+      document.getElementById("divSignUp").style.display = "none";
+    }
+    
+    function fSignIn() {
+      // This is only a test. It does not work like this; we will update it before we launch the platform.
+
+      const emailSignIn = document.getElementById("SignInEmail");
+      const passwordSignIn = document.getElementById("SignInPassword");
+      
+      window.location.href = "company.html";
+    }
+    
+  </script>
+  
+</body>
+</html>

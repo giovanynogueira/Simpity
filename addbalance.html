@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add balance - Simpity</title>
+
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #divLogo {
+      text-align: center;
+      margin: 20px 0;
+    }
+    #divpaddfunds {
+      text-align: center;
+      margin: 20px;
+    }
+    img {
+      max-width: 70%;
+      height: auto;
+    }
+    button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      background-color: #004547;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #006060;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="divLogo" class="stydivLogo">
+    <a href="index.html">
+      <img id="imglogo" src="logofull.jpeg" alt="Simpity Logo">
+    </a>
+  </div>
+  
+  <div id="divDashboardCompany" class="stydivPitch" align="center">
+    <section id="secCompany1" class="stySectionBlue">
+      <label id="labelCompanyName">Company name</label>
+    </section>
+    
+    <div id="divMenu" align="center" style="color: black; font-size: 17px;">
+    
+    <p><a href="addbalance.html">Add balance</a> • 
+    <a href="#">Settings</a> • 
+    <a href="company.html">Exit</a></p>
+    
+    </div>
+    
+    <div id="divBalance" align="center" style="color: black; font-size: 17px;">
+    <label id="labelBalance">Balance (SOL): 0</label>
+    
+    </div>
+
+  <div id="divpAddBalance" style="color: black; font-size: 21px;">
+    <p align="center">
+      To add balance to your wallet, you will need supported tokens to bridge them using the Wormhole Connect. 
+      This will make your tokens available on Solana (SOL), the token required for adding and registering products on Simpity.
+      <br><br>
+      Fill in your information below!
+      </div>
+      
+      <div align ="center" class="stydivPitch"  style="color: black; font-size: 21px;">
+      
+      <p style="background-color: #7BA1FF; color: white;">Copy your Solana address on Simpity: </p>
+      <label id="WalletAddress" style="font-size: 16px;">address will appear here after being generated</label><br>
+      <a href="#" style="font-size: 11px;">Generate a new address</a>
+    </p>
+    
+    
+  </div>
+
+<div align="center">
+  <button id="loadWidgetBtn">I'm not a robot</button>
+  <p style="color: black; font-size: 11px;">* After click, Wormhole Connect will load.</p>
+  <a href="company.html" style="font-size: 11px;">Back</a>
+  </div>
+
+  <!-- Wormhole Connect -->
+  <div id="bridge-container"></div>
+
+  <script type="module">
+    import WormholeConnect, {
+  WormholeConnectConfig, 
+  WormholeConnectTheme, 
+  wormholeConnectHosted } from 'https://unpkg.com/@wormhole-foundation/wormhole-connect';
+
+    document.getElementById('loadWidgetBtn').addEventListener('click', () => {
+      const container = document.getElementById('bridge-container');
+
+      wormholeConnectHosted(container, {
+        config: {
+          chains: ['Ethereum', 'Solana'],
+          rpcs: {
+            Solana: 'https://rpc.ankr.com/solana',
+          },
+        },
+        theme: {
+          background: { default: '#004547' },
+        },
+      }).then(() => {
+        alert('Widget loaded successfully!');
+      }).catch(error => {
+        console.error('Wormhole load failed:', error);
+        alert('Failed to load widget. Check the console for details.');
+      });
+    });
+  </script>
+</body>
+
+</html>

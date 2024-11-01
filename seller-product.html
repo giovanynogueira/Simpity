@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Product found - Simpity</title>
+  
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css">
+  
+  <script>
+    // Load an example of product
+    window.onload = function() {
+      Example();
+    };
+  </script>
+  
+</head>
+
+<body align="center">
+  <div id="divLogo" align="center" class="stydivLogo">
+  <a href="index.html"><img id="imglogo" src="logofull.jpeg" width="70%" height="70%"></a>
+  </div>
+  
+  <div id="divDashboard" class="stydivPitch">
+    <section id="sec1" class="stySectionBlue">
+      <label id="labelName">Seller name</label>
+    </section>
+    
+    <div id="divMenu" align="center" style="color: black; font-size: 17px;">
+    
+    <p>
+    <a href="#">Settings</a> • 
+    <a href="seller.html">Back</a></p>
+    
+    </div>
+    
+    <div id="divProduct" class="stydivPitch" align ="left" style="color: black; font-size: 18px;">
+      <p>
+        <p align="center">We found this product:</p><br>
+      Product registered by: <label id="lCompanyName">-</label>
+      <br>Product name: <label id="lProductName">-</label>
+      <br>Product code: <label id="lProductCode">-</label>
+      
+      <br><br>Registered by (<label id="lCompanyRName"></label>) in: <label id="lRegisteredIn">-</label>
+      <br>Seller<label id="lSellerName"></label> received in: <label id="lReceivedIn">-</label>
+      <br>Seller<label id="lSellerName"></label> sold in: <label id="lSoldIn">-</label>
+      <br>End consumer<label id="lEndConsumerName"></label> purchased in: <label id="lBoughtIn">-</label>
+      
+      <br><br><p style="background-color: mediumspringgreen;">Current status: <label id="lCurrentStatus">-</label></p>
+      
+      </p>
+      
+      
+      
+      <div align="center">
+      <button id="aConfirmReceived" class="stybGrandeFine" onclick="fConfirm()">Confirm that you have received it</button>
+      <br><br><button id="aConfirmSold" class="stybGrandeFine" onclick="fConfirmSale()">Confirm that you have sold it</button>
+      </div>
+      
+      
+    </div>
+    
+    
+    
+    <script>
+      
+      function Example() {
+        // Information about the product
+          const companyname = "Sneakersuper";
+          const productname = "Sneakers  XXT";
+          const productcode = "123456789000";
+          const registeredin = "October 28, 2024 at 10: 38: 33 AM ";
+          const currentstatus = "Waiting to be  sold and confirmed.";
+          const sellername = "Teen Store";
+        
+        // Loading the example
+          document.getElementById("lCompanyName").textContent = companyname;
+          document.getElementById("lCompanyRName").textContent = companyname;
+          document.getElementById("lProductName").textContent = productname;
+          document.getElementById("lProductCode").textContent = productcode;
+          document.getElementById("lRegisteredIn").textContent = registeredin;
+          document.getElementById("lCurrentStatus").textContent = currentstatus;
+          
+          document.getElementById("aConfirmReceived").removeAttribute("href");
+          
+      }
+      
+      function fConfirm() {
+        window.location.href = "productreceived.html";
+      }
+      
+      function fConfirmSale() {
+        window.location.href = "productsold.html";
+      }
+      
+      
+    </script>
+
+</body>
+
+</html>
